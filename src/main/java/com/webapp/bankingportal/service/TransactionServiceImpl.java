@@ -35,6 +35,9 @@ public class TransactionServiceImpl implements TransactionService {
         return transactionDTOs;
     }
     public void sendBankStatementByEmail(String accountNumber) {
+        if (accountNumber == null || accountNumber.trim().isEmpty()) {
+            throw new IllegalArgumentException("Account number must not be null or empty");
+        }
         List<TransactionDTO> transactions = getAllTransactionsByAccountNumber(accountNumber);
 
         StringBuilder sb = new StringBuilder();
