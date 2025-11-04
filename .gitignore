@@ -54,3 +54,7 @@ node_modules/
 # Test reports
 test-output/
 target/
+# Docker volumes
+docker/mysql/data/
+docker/redis/data/
+
