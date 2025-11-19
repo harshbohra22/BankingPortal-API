@@ -6,7 +6,6 @@ databases:
 services:
   - type: web
     name: bankingportal-api
-    env: java
     plan: free
     region: singapore
 
